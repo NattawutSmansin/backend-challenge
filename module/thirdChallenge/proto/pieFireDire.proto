@@ -1,0 +1,17 @@
+syntax = "proto3";
+option go_package = "./module/thirdChallenge/proto";
+import "google/api/annotations.proto";
+
+service PieFireDireServices {
+    rpc GetPieFireDire(Request) returns (Response) {
+        option (google.api.http) = {
+            get: "/beef/summary"
+        };
+    }
+}
+
+message Request {}
+
+message Response {
+    map<string, int32> beef = 1;
+}
